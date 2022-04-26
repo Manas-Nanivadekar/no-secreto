@@ -1,5 +1,6 @@
-const randomWords = require('random-words'); // TODO: Replace with a secure random number generator
+// TODO: Replace with a secure random number generator
 import { levelDB } from './levelDB';
+const randomWords = require('random-words');
 
 export class OTPGenerator {
   async generateOtp(user: string): Promise<string> {
