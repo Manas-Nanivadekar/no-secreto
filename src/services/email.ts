@@ -34,7 +34,7 @@ const sendOTPEmail = async (user: string) => {
   const emailTransporter = setEmailTransporter();
 
   // Otp Creation
-  const otp = new OTPGenerator().generateOtp(user);
+  const otp = await new OTPGenerator().generateOtp(user);
 
   // Sending Email
   await emailTransporter
