@@ -18,7 +18,8 @@ export class OTPGenerator {
     if (storedOtp === otp) {
       await levelDB.del(user);
       return true;
+    } else {
+      return false;
     }
-    return false;
   }
 }
