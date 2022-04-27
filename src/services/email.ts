@@ -2,6 +2,8 @@ import { EmailDetails } from '../utils/emailDetails';
 import { OTPGenerator } from '../utils/otpGenerator';
 const nodemailer = require('nodemailer');
 
+var emailConsole = true;
+
 const setEmailTransporter = () => {
   const defaultDetails = new EmailDetails().getLibEmailDetails();
 
@@ -16,6 +18,10 @@ const setEmailTransporter = () => {
   });
 
   return transporter;
+};
+
+const turnOffEmailConsole = () => {
+  emailConsole = false;
 };
 
 const setEmailDetails = (email: string, password: string) => {
@@ -45,8 +51,26 @@ const sendOTPEmail = async (user: string) => {
       text: 'Your OTP is: ' + otp,
     })
     .then((info: { response: string }) => {
-      console.log('Email sent: ' + info.response);
+      if (emailConsole == true) {
+        console.log('Email sent: ' + info.response);
+        return info.response;
+      } else {
+        return info.response;
+      }
     });
+};
+
+const updateDefaultEmailDetails = (
+  host: string,
+  port: number,
+  secure: boolean
+) => {
+  const result = new EmailDetails().updateDefaultEmailDetails(
+    host,
+    port,
+    secure
+  );
+  return result;
 };
 
 const verifyEmail = async (user: string, otp: string) => {
@@ -58,4 +82,10 @@ const verifyEmail = async (user: string, otp: string) => {
   }
 };
 
-export { setEmailDetails, verifyEmail, sendOTPEmail };
+export {
+  setEmailDetails,
+  verifyEmail,
+  sendOTPEmail,
+  turnOffEmailConsole,
+  updateDefaultEmailDetails,
+};
