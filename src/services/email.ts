@@ -53,8 +53,9 @@ const verifyEmail = async (user: string, otp: string) => {
   const isValid = await new OTPGenerator().verifyOtp(user, otp);
   if (isValid) {
     return true;
+  } else {
+    return false;
   }
-  return false;
 };
 
 export { setEmailDetails, verifyEmail, sendOTPEmail };
