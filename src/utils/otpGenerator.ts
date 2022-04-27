@@ -14,8 +14,8 @@ export class OTPGenerator {
   }
 
   async verifyOtp(user: string, otp: string): Promise<boolean | string> {
-    const storedOtp = await levelDB.get(user, { valueEncoding: 'utf8' });
-    console.log(storedOtp);
+    var storedOtp = await levelDB.get(user, { valueEncoding: 'utf8' });
+    storedOtp = storedOtp.replace(/"/g, '');
     if (storedOtp == otp) {
       await levelDB.del(user);
       return true;
