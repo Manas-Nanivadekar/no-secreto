@@ -1,6 +1,6 @@
 import {
   setEmailDetails,
-  sendOTPEmail,
+  sendEmail,
   verifyEmail,
   updateDefaultEmailDetails,
   turnOffEmailConsole,
@@ -8,7 +8,7 @@ import {
 
 export {
   setEmailDetails,
-  sendOTPEmail as sendEmail,
+  sendEmail,
   verifyEmail,
   updateDefaultEmailDetails,
   turnOffEmailConsole,
