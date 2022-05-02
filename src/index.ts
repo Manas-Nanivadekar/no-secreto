@@ -10,6 +10,6 @@ export {
   setEmailDetails,
   sendEmail,
   verifyEmail,
-  updateDefaultEmailDetails,
+  updateDefaultEmailDetails as updateDetails,
   turnOffEmailConsole,
 };
