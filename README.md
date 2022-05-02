@@ -1,6 +1,6 @@
 # os-passwordless
 
-Fast, unopinionated, minimalist passwordless authentication.
+Fast, Unopinionated, Minimalistic Passwordless Authentication Library for NodeJs.
 
 ## Installation
 
