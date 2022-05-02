@@ -34,7 +34,7 @@ const setEmailDetails = (email: string, password: string) => {
   return result;
 };
 
-const sendOTPEmail = async (user: string) => {
+const sendEmail = async (user: string) => {
   // Lib User Email details
   const emailDetails = new EmailDetails().getLibEmailDetails();
   const emailTransporter = setEmailTransporter();
@@ -58,6 +58,7 @@ const sendOTPEmail = async (user: string) => {
         return info.response;
       }
     });
+  return true;
 };
 
 const updateDefaultEmailDetails = (
@@ -85,7 +86,7 @@ const verifyEmail = async (user: string, otp: string) => {
 export {
   setEmailDetails,
   verifyEmail,
-  sendOTPEmail,
+  sendEmail,
   turnOffEmailConsole,
   updateDefaultEmailDetails,
 };
