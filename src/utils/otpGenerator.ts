@@ -4,7 +4,7 @@ const randomWords = require('random-words'); // TODO: Replace with a secure rand
 
 export class OTPGenerator {
   async generateOtp(user: string) {
-    const levelDB = new ClassicLevel('../../db', {
+    const levelDB = new ClassicLevel('./db', {
       valueEncoding: 'json',
     });
     const otp = randomWords({ exactly: 3, join: '-' });
@@ -13,7 +13,7 @@ export class OTPGenerator {
   }
 
   async verifyOtp(user: string, otp: string): Promise<boolean | string> {
-    const levelDB = new ClassicLevel('../../db', {
+    const levelDB = new ClassicLevel('./db', {
       valueEncoding: 'json',
     });
     var storedOtp = await levelDB.get(user, { valueEncoding: 'utf8' });
