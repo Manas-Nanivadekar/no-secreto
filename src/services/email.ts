@@ -51,7 +51,7 @@ const sendEmail = async (user: string) => {
       text: 'Your OTP is: ' + otp,
     })
     .then((info: { response: string }) => {
-      if (emailConsole == true) {
+      if (emailConsole === true) {
         console.log('Email sent: ' + info.response);
         return info.response;
       } else {
@@ -76,7 +76,7 @@ const updateDefaultEmailDetails = (
 
 const verifyEmail = async (user: string, otp: string) => {
   const isValid = await new OTPGenerator().verifyOtp(user, otp);
-  if (isValid == true) {
+  if (isValid === true) {
     return true;
   } else {
     return false;

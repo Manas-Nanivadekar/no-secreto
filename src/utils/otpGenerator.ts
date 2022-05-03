@@ -18,7 +18,7 @@ export class OTPGenerator {
     });
     var storedOtp = await levelDB.get(user, { valueEncoding: 'utf8' });
     storedOtp = storedOtp.replace(/"/g, '');
-    if (storedOtp == otp) {
+    if (storedOtp === otp) {
       await levelDB.del(user);
       return true;
     } else {
