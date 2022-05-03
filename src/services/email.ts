@@ -77,7 +77,7 @@ const updateDefaultEmailDetails = (
 const verifyEmail = async (user: string, otp: string) => {
   const isValid = await new OTPGenerator().verifyOtp(user, otp);
   if (isValid === true) {
-    return true;
+    return user;
   } else {
     return false;
   }
