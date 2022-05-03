@@ -12,7 +12,7 @@ export class OTPGenerator {
     return otp;
   }
 
-  async verifyOtp(user: string, otp: string): Promise<boolean | string> {
+  async verifyOtp(user: string, otp: string): Promise<boolean> {
     const levelDB = new ClassicLevel('./db', {
       valueEncoding: 'json',
     });
