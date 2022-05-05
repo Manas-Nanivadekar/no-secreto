@@ -24,6 +24,10 @@ const turnOffEmailConsole = () => {
   emailConsole = false;
 };
 
+const alphaNumericalOTP = () => {
+  new OTPGenerator().generateAlphaNumericalOtp();
+};
+
 const setEmailDetails = (email: string, password: string) => {
   if (!email || !password) {
     throw new Error(
@@ -88,5 +92,6 @@ export {
   verifyEmail,
   sendEmail,
   turnOffEmailConsole,
+  alphaNumericalOTP,
   updateDefaultEmailDetails,
 };

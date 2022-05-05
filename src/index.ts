@@ -4,6 +4,7 @@ import {
   verifyEmail,
   updateDefaultEmailDetails,
   turnOffEmailConsole,
+  alphaNumericalOTP,
 } from './services/email';
 
 import { sendSMS, setSMSDetails, verifySMS } from './services/sms';
@@ -16,5 +17,6 @@ export {
   turnOffEmailConsole,
   sendSMS,
   setSMSDetails,
+  alphaNumericalOTP,
   verifySMS,
 };
