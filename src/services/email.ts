@@ -26,6 +26,7 @@ const turnOffEmailConsole = () => {
 
 const alphaNumericalOTP = () => {
   new OTPGenerator().generateAlphaNumericalOtp();
+  return true;
 };
 
 const setEmailDetails = (email: string, password: string) => {
