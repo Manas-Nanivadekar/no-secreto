@@ -54,18 +54,18 @@ const sendEmail = async (user: string) => {
       to: user,
       subject: 'Your OTP for passwordless authentication',
 
-      html: `<div style="  border-radius: 8px;
+      html: `<div>
+      <h1>Your otp is <span style="border-radius: 8px;
       display: block;
-      margin: 0 auto;
       width: max-content;
       height: max-content;
       background: #333;
       color: white;
-      font: 12px Monaco;
+      font: 19px Monaco;
       padding: 0 15px;
       margin-top: 1rem;
-      position: relative;">
-      <h1>${otp}</h1>
+      position: relative;"
+      >${otp}</span></h1>
     </div>`,
     })
     .then((info: { response: string }) => {
