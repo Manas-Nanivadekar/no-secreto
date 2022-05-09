@@ -1,9 +1,9 @@
-# os-passwordless
+# no-secreto
 
 Fast, Unopinionated, Minimalistic Open-Source Passwordless Authentication Library for NodeJs.
 
-# What is os-passwordless?
+# What is no-secreto?
 
-os-passwordless is a library to help you add passwordless authentication in your nodejs applicaiton.
+no-secreto is a library to help you add passwordless authentication in your nodejs applicaiton.
 
-You can find documentation for this library [here](https://docs-os-passwordless.vercel.app/)
+You can find documentation for this library [here](https://docs-no-secreto.vercel.app/)

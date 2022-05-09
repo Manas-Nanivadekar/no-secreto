@@ -1,5 +1,5 @@
 {
-  "version": "0.2.5",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -31,16 +31,16 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "os-passwordless",
+  "name": "no-secreto",
   "author": "Manas-Nanivadekar",
   "module": "dist/ospasswordless.esm.js",
   "size-limit": [
     {
-      "path": "dist/os-passwordless.cjs.production.min.js",
+      "path": "dist/no-secreto.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/os-passwordless.esm.js",
+      "path": "dist/no-secreto.esm.js",
       "limit": "10 KB"
     }
   ],
